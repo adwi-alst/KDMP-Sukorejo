@@ -1,0 +1,161 @@
+{
+    "tentang": {
+        "judul": "Apa Itu KDMP?",
+        "isi": [
+            "Koperasi Desa Merah Putih (KDMP) adalah program strategis nasional yang dirancang untuk membangun kemandirian ekonomi desa melalui sistem koperasi modern. Berlandaskan prinsip gotong royong, kebersamaan, dan keadilan, KDMP menjadi wadah resmi bagi warga desa atau kelurahan untuk mengelola potensi lokal secara kolektif, transparan, dan berkelanjutan.",
+            "KDMP hadir sebagai solusi terhadap berbagai tantangan di desa, seperti rendahnya daya tawar petani dan nelayan, panjangnya rantai distribusi, terbatasnya akses pembiayaan, serta kurangnya fasilitas pemasaran yang memadai. Dengan keberadaan KDMP, hasil pertanian, peternakan, perikanan, maupun produk UMKM desa dapat dipasarkan dengan harga yang lebih adil, langsung ke konsumen atau mitra usaha tanpa terlalu banyak perantara.",
+            "Selain fungsi ekonomi, KDMP juga memiliki peran sosial dan edukatif. Melalui rapat anggota, pelatihan, dan kegiatan bersama, KDMP membangun kesadaran warga tentang pentingnya pengelolaan usaha yang sehat, pencatatan keuangan yang rapi, dan pengambilan keputusan yang demokratis. Hal ini menjadikan KDMP bukan sekadar lembaga ekonomi, tetapi juga pusat pemberdayaan dan penguatan kapasitas masyarakat desa."
+        ],
+        "highlight": "KDMP didirikan pada tahun 2010 dengan tujuan utama meningkatkan kesejahteraan ekonomi anggota dan masyarakat desa melalui usaha bersama berdasarkan asas kekeluargaan dan gotong royong.",
+        "visi_misi": {
+            "visi": "Menjadi koperasi unggulan yang mendorong kemandirian ekonomi desa dan kesejahteraan anggota.",
+            "misi": [
+                "Meningkatkan partisipasi anggota dalam pembangunan ekonomi desa",
+                "Menyediakan layanan keuangan yang terjangkau",
+                "Mengembangkan usaha produktif berbasis potensi lokal",
+                "Meningkatkan kapasitas anggota melalui pelatihan dan pendampingan"
+            ]
+        }
+    },
+    "peran": {
+        "judul": "Peran KDMP di Desa",
+        "intro": "KDMP menjalankan beragam peran penting yang saling berkaitan untuk meningkatkan kesejahteraan dan kemandirian desa, di antaranya:",
+        "items": [
+            {
+                "judul": "Off-taker hasil produksi lokal",
+                "isi": "KDMP berperan membeli langsung hasil panen petani, usaha warga, atau produk pengrajin lokal dengan harga yang wajar dan menguntungkan. Dengan mekanisme ini, warga desa memiliki kepastian pasar dan harga, serta terlindungi dari permainan harga tengkulak."
+            },
+            {
+                "judul": "Pusat distribusi kebutuhan pokok",
+                "isi": "Melalui jaringan koperasi, KDMP dapat mendatangkan barang-barang kebutuhan rumah tangga dengan harga lebih murah karena memotong rantai pasok. Hal ini membantu menjaga stabilitas harga di desa dan memastikan ketersediaan barang pokok."
+            },
+            {
+                "judul": "Fasilitator pembiayaan usaha",
+                "isi": "KDMP memberikan akses pembiayaan mikro, tabungan anggota, dan kerja sama dengan lembaga keuangan. Dana ini digunakan untuk pengembangan usaha, pembelian alat produksi, maupun kebutuhan mendesak anggota."
+            },
+            {
+                "judul": "Penyelenggara pelatihan dan pendampingan",
+                "isi": "KDMP mengadakan pelatihan manajemen usaha, teknik produksi, pemasaran digital, hingga pengolahan produk. Tujuannya adalah meningkatkan keterampilan warga agar mampu mengelola usahanya secara lebih profesional dan berdaya saing."
+            },
+            {
+                "judul": "Mitra strategis pemerintah desa",
+                "isi": "KDMP dapat menjadi mitra resmi dalam pengelolaan program pembangunan desa, penyaluran bantuan, atau pengembangan proyek-proyek berbasis masyarakat. Dengan tata kelola yang transparan, KDMP membantu memastikan bahwa setiap program berjalan efektif dan tepat sasaran."
+            }
+        ],
+        "penutup": "Melalui semua peran ini, KDMP diharapkan menjadi motor penggerak ekonomi desa, menciptakan lapangan kerja baru, meningkatkan pendapatan warga, dan membangun kemandirian desa secara berkelanjutan."
+    },
+    "struktur": {
+    "judul": "Struktur Pengurus",
+    "pengurus": {
+        "periode": "2025",
+        "anggota": [
+            {
+                "nama": "nama_ketua",
+                "jabatan": "Ketua",
+                "foto": "img/pengurus/gambar.jpg",
+                "alamat": "alamat",
+                "pekerjaan": "pekerjaan"
+            },
+            {
+                "nama": "Nama_wakil_ketua_bidang_usaha",
+                "jabatan": "Wakil Ketua Bidang Usaha",
+                "foto": "img/pengurus/gambar.jpg",
+                "alamat": "alamat",
+                "pekerjaan": "pekerjaan"
+            },
+            {
+                "nama": "Nama_wakil_ketua_bidang_anggota",
+                "jabatan": "Wakil Ketua Bidang Anggota",
+                "foto": "img/pengurus/gambar.jpg",
+                "alamat": "alamat",
+                "pekerjaan": "pekerjaan"
+            },
+            {
+                "nama": "nama_sekretaris",
+                "jabatan": "Sekretaris",
+                "foto": "img/pengurus/gambar.jpg",
+                "alamat": "alamat",
+                "pekerjaan": "pekerjaan"
+            },
+            {
+                "nama": "nama_bendahara",
+                "jabatan": "Bendahara",
+                "foto": "img/pengurus/gambar.jpg",
+                "alamat": "alamat",
+                "pekerjaan": "pekerjaan"
+            }
+        ]
+    }
+},
+
+"berita": {
+        "judul": "Perkembangan Terbaru KDMP",
+        "items": [
+            {
+                "tanggal": "Januari 2025",
+                "isi": "KDMP Desa Sukorejo baru saja terbentuk dan saat ini masih dalam tahap awal pembentukan anggota."
+            },
+            {
+                "tanggal": "Februari 2025",
+                "isi": "Pengurus KDMP melakukan sosialisasi kepada warga terkait manfaat koperasi dan mekanisme keanggotaan."
+            },
+            {
+                "tanggal": "Maret 2025",
+                "isi": "Mulai dilakukan pendataan warga yang berminat menjadi anggota serta rencana unit usaha koperasi."
+            }
+        ],
+        "lokasi": "Desa Sukorejo, Kecamatan Malo, Kabupaten Bojonegoro, Jawa Timur"
+    },
+    "umkm": {
+        "judul": "Produk UMKM Desa",
+        "produk": [
+            {
+                "nama": "Kerupuk",
+                "deskripsi": "Kerupuk renyah khas desa Sukorejo yang diproduksi secara tradisional dengan cita rasa gurih.",
+                "foto": "gambar/krupuk.jpeg"
+            },
+            {
+                "nama": "Susu Kedelai",
+                "deskripsi": "Minuman sehat berbahan dasar kedelai pilihan, segar dan bergizi untuk semua kalangan.",
+                "foto": "gambar/susu-kedelai.jpeg"
+            },
+            {
+                "nama": "Gula Aren",
+                "deskripsi": "Gula aren asli desa yang diproses alami tanpa bahan pengawet, cocok untuk pemanis minuman dan masakan.",
+                "foto": "gambar/gula-aren.jpeg"
+            },
+            {
+                "nama": "Sangkar Burung",
+                "deskripsi": "Kerajinan tangan warga desa berupa sangkar burung berkualitas, kuat, dan bernilai seni.",
+                "foto": "gambar/sangkar-burung.jpeg"
+            },
+            {
+                "nama": "Pentol Korea",
+                "deskripsi": "Olahan makanan kekinian hasil kreasi pemuda desa dengan cita rasa unik dan disukai anak muda.",
+                "foto": "gambar/pentol-korea.jpeg"
+            }
+        ]
+    },
+    "faq": {
+        "judul": "Pertanyaan Umum (FAQ)",
+        "items": [
+            {
+                "tanya": "Apa itu KDMP?",
+                "jawab": "KDMP (Koperasi Desa Merah Putih) adalah koperasi modern yang menjadi wadah bagi warga untuk mengelola potensi ekonomi desa secara bersama."
+            },
+            {
+                "tanya": "Bagaimana cara menjadi anggota?",
+                "jawab": "Cukup mendaftar melalui pengurus KDMP dengan membawa identitas diri dan kesediaan membayar simpanan pokok & wajib."
+            },
+            {
+                "tanya": "Apa keuntungan menjadi anggota?",
+                "jawab": "Anggota mendapatkan akses pembiayaan, pemasaran produk, pelatihan usaha, serta ikut menentukan kebijakan koperasi melalui rapat anggota."
+            },
+            {
+                "tanya": "Apakah non-anggota bisa membeli produk KDMP?",
+                "jawab": "Bisa, produk dan layanan KDMP terbuka untuk masyarakat umum, namun harga dan fasilitas tertentu lebih menguntungkan bagi anggota."
+            }
+        ]
+    }
+
+}

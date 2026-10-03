@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>KDMP - Sukorejo</title>
+</head>
+<body>
+    <!-- Header Statis -->
+    <header>
+        <div class="logo">
+            <img src="gambar/logo.png" alt="Logo KDMP">
+            <div class="logo-text">
+                <h1>(KDMP) KOPERASI DESA MERAH PUTIH DESA SUKOREJO</h1>
+                <p>Bersama Membangun Ekonomi Desa</p>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#tentang">Tentang Kami</a></li>
+            <li><a href="#peran">Peran di Desa</a></li>
+            <li><a href="#berita">Perkembangan</a></li>
+            <li><a href="#umkm">Produk UMKM</a></li>
+            <li><a href="#struktur">Struktur</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="tentang">
+            <h2 id="tentang-judul"></h2>
+            <div id="tentang-isi"></div>
+            <div class="highlight" id="tentang-highlight"></div>
+            <h3 id="visi-misi-judul"></h3>
+            <div id="visi-misi-content"></div>
+        </section>
+        
+        <section id="peran">
+            <h2 id="peran-judul"></h2>
+            <div id="peran-content"></div>
+        </section>
+        
+
+        <section id="berita">
+            <h2 id="berita-judul"></h2>
+            <div id="berita-content"></div>
+            <p id="berita-lokasi"></p>
+        </section>
+
+        <!-- Produk UMKM -->
+        <section id="umkm">
+            <h2 id="umkm-judul"></h2>
+            <div class="pengurus-grid" id="umkm-container"></div>
+        </section>
+
+        <section id="struktur">
+            <h2 id="struktur-judul"></h2>
+            <p class="periode" id="periode-pengurus"></p>
+            <div class="pengurus-grid" id="pengurus-container"></div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <h2 id="faq-judul"></h2>
+            <div id="faq-content"></div>
+        </section>
+    </div>
+    
+    <!-- Footer Statis -->
+    <footer>
+        <h2>KDMP Desa Sukorejo Kec. Malo</h2>
+        
+        <div class="info">
+            <div>
+                <p><strong>Alamat:</strong> Ds.Sukorejo Kec. Malo Kab.Bojonegoro</p>
+            </div>
+        </div>
+        
+        <p style="margin-top: 2rem;">&copy;2025 KDMP Sukorejo. Seluruh hak cipta dilindungi.</p>
+    </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Muat data JSON
+    fetch('kdmp.json')
+        .then(response => response.json())
+        .then(data => {
+            // =============================
+            // Bagian Tentang
+            // =============================
+            document.getElementById('tentang-judul').textContent = data.tentang.judul;
+            const tentangIsi = document.getElementById('tentang-isi');
+            data.tentang.isi.forEach(paragraph => {
+                const p = document.createElement('p');
+                p.textContent = paragraph;
+                tentangIsi.appendChild(p);
+            });
+            
+            document.getElementById('tentang-highlight').innerHTML = `<p>${data.tentang.highlight}</p>`;
+            
+            document.getElementById('visi-misi-judul').textContent = "Visi dan Misi";
+            const visiMisiContent = document.getElementById('visi-misi-content');
+            visiMisiContent.innerHTML = `
+                <p><strong>Visi:</strong> ${data.tentang.visi_misi.visi}</p>
+                <p><strong>Misi:</strong></p>
+                <ul>
+                    ${data.tentang.visi_misi.misi.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+            `;
+
+            // =============================
+            // Bagian Peran
+            // =============================
+            document.getElementById('peran-judul').textContent = data.peran.judul;
+            const peranContent = document.getElementById('peran-content');
+            peranContent.innerHTML = `
+                <p>${data.peran.intro}</p>
+                ${data.peran.items.map(item => `
+                    <div class="peran-item">
+                        <h3>${item.judul}</h3>
+                        <p>${item.isi}</p>
+                    </div>
+                `).join('')}
+                <p>${data.peran.penutup}</p>
+            `;
+
+            // =============================
+            // Bagian Struktur Pengurus
+            // =============================
+            document.getElementById('struktur-judul').textContent = data.struktur.judul;
+            document.getElementById('periode-pengurus').textContent = `Periode ${data.struktur.pengurus.periode}`;
+            
+            const pengurusContainer = document.getElementById('pengurus-container');
+            data.struktur.pengurus.anggota.forEach(pengurus => {
+                const card = document.createElement('div');
+                card.className = 'pengurus-card';
+                card.innerHTML = `
+                    <img src="${pengurus.foto}" alt="${pengurus.nama}" class="pengurus-foto" loading="lazy">
+                    <div class="pengurus-info">
+                        <h3>${pengurus.nama}</h3>
+                        <span class="pengurus-jabatan">${pengurus.jabatan}</span>
+                        <div class="pengurus-detail">
+                            <p><strong>Alamat:</strong> ${pengurus.alamat}</p>
+                            <p><strong>Pekerjaan:</strong> ${pengurus.pekerjaan}</p>
+                        </div>
+                    </div>
+                `;
+                pengurusContainer.appendChild(card);
+            });
+
+            // =============================
+            // Bagian Berita
+            // =============================
+            document.getElementById('berita-judul').textContent = data.berita.judul;
+            const beritaContent = document.getElementById('berita-content');
+            beritaContent.innerHTML = `
+                <ul>
+                    ${data.berita.items.map(item => `<li><strong>${item.tanggal}:</strong> ${item.isi}</li>`).join('')}
+                </ul>
+            `;
+            document.getElementById('berita-lokasi').textContent = `Lokasi: ${data.berita.lokasi}`;
+
+            // =============================
+            // Bagian UMKM
+            // =============================
+            document.getElementById('umkm-judul').textContent = data.umkm.judul;
+            const umkmContainer = document.getElementById('umkm-container');
+            data.umkm.produk.forEach(produk => {
+                const card = document.createElement('div');
+                card.className = 'pengurus-card';
+                card.innerHTML = `
+                    <img src="${produk.foto}" alt="${produk.nama}" class="pengurus-foto" loading="lazy">
+                    <div class="pengurus-info">
+                        <h3>${produk.nama}</h3>
+                        <p>${produk.deskripsi}</p>
+                    </div>
+                `;
+                umkmContainer.appendChild(card);
+            });
+
+            // =============================
+            // Bagian FAQ
+            // =============================
+            document.getElementById('faq-judul').textContent = data.faq.judul;
+            const faqContent = document.getElementById('faq-content');
+            faqContent.innerHTML = data.faq.items.map(item => `
+                <div class="highlight">
+                    <p><strong>${item.tanya}</strong><br>${item.jawab}</p>
+                </div>
+            `).join('');
+        })
+        .catch(error => {
+            console.error('Gagal memuat data:', error);
+            // Konten fallback
+            document.getElementById('tentang-isi').innerHTML = `
+                <p>Koperasi Desa Merah Putih (KDMP) adalah badan usaha yang dimiliki dan dikelola oleh anggota untuk memenuhi kebutuhan bersama di bidang ekonomi, sosial, dan budaya sesuai dengan nilai dan prinsip koperasi.</p>
+            `;
+        });
+});
+</script>
+
+</body>
+</html>
